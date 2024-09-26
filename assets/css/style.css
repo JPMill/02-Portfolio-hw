@@ -32,7 +32,7 @@ h6 {
 p {
   margin: 0;
 }
-
+/*  */
 header {
   padding: 15px 6% 15px 0;
   display: flex;
@@ -43,7 +43,7 @@ header {
   background-color: var(--tertiary);
   box-shadow: 0 5px 35px rgba(146, 204, 206, 0.4);
 }
-
+/*  */
 header h1 {
   color: var(--tertiary);
   background-color: var(--secondary);
@@ -52,13 +52,13 @@ header h1 {
   font-size: 4vw;
   line-height: 1;
 }
-
+/*  */
 nav {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-
+/*  */
 nav a {
   text-decoration: none;
   padding: 5px 10px;
@@ -71,24 +71,24 @@ nav a {
   transition: all 0.25s ease-in;
   font-size: 1.4rem;
 }
-
+/*  */
 nav a:hover {
   background-size: 100% 100%;
   color: var(--primary);
 }
-
+/*  */
 nav a:last-child {
   margin-right: 0;
 }
-
+/*  */
 main {
   margin-top: 20px;
   margin-bottom: 45px;
 }
-
+/*  */
 .hero-banner {
   background: rgb(68, 88, 120);
-  background-image: url("../images/02-hero-bg.jpg"), linear-gradient(180deg, var(--secondary) 0%, var(--primary) 100%);
+  background-image: url("../images/code-image.png"), linear-gradient(180deg, var(--secondary) 0%, var(--primary) 100%);
   background-size: cover;
   background-position: center;
   background-blend-mode: soft-light;
@@ -100,27 +100,30 @@ main {
   align-items: flex-end;
   text-align: right;
 }
-
+/*  */
 .hero-banner div {
   flex: 0 0 90%;
+  
 }
-
+/*  */
 .hero-banner h2 {
   background-color: var(--secondary);
   color: var(--tertiary);
   margin: 0;
   padding: 5px 10px;
-  font-size: 2.3rem;
+  font-size: 1.8rem;
   line-height: 1.2;
   display: inline;
 }
 
+
+/*  */
 .page-wrapper {
   max-width: 88%;
   margin-left: auto;
   margin-right: auto;
 }
-
+/*  */
 .page-section {
   margin: 25px 0;
   padding: 10px 0;
@@ -130,7 +133,7 @@ main {
   align-items: stretch;
   justify-content: space-between;
 }
-
+/*  */
 .page-section > h2 {
   flex: 0 0 20%;
   text-align: right;
@@ -139,21 +142,21 @@ main {
   font-size: 4vw;
   line-height: 1.1;
 }
-
+/*  */
 .page-section > div {
   flex: 0 0 77%;
 }
-
+/*  */
 .page-section p {
   margin-bottom: 20px;
 }
-
+/*  */
 .flex-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-
+/*  */
 .flex-item {
   border: 5px solid var(--secondary);
   background-color: var(--primary);
@@ -171,26 +174,26 @@ main {
   transition: all 0.5s;
   font-size: 0.9rem;
 }
-
+/*  */
 /* feature first portfolio item */
 .flex-item:first-child {
     min-height: 400px;
     flex-basis: 100%;
 }
-
+/*  */
 .flex-item:hover {
   background-color: rgba(0, 0, 0, 0.3);
 }
-
+/*  */
 .flex-item div {
   background-color: var(--secondary);
   padding: 8px 10px;
 }
-
+/*  */
 .flex-item h3 {
   font-size: 1.6rem;
 }
-
+/*  */
 .contact address {
   display: flex;
   flex-wrap: wrap;
@@ -198,7 +201,7 @@ main {
   align-items: center;
   height: 100%;
 }
-
+/*  */
 .contact address a {
   color: var(--tertiary);
   padding: 5px;
@@ -213,7 +216,7 @@ main {
   margin: 0 0.2rem 0.1rem;
   display: inline-block;
 }
-
+/*  */
 .contact address a:hover {
   background-size: 100% 88%;
   color: var(--secondary);
@@ -222,23 +225,32 @@ main {
 /* portfolio project images */
 /* TODO: Add portfolio project images here using background images*/
 .run-buddy {
-  
+  background-image: url("../images/run-buddy.avif");
+  background-size: cover;
+  background-position: center; 
 }
 
 .led-wall {
-  
+  background-image: url("../images/LED-Wall.webp");
+  background-size: cover;
+  background-position: center;
 }
 
-.react-calc {
-  
+.calc {
+  background-image: url("../images/Calculator.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
-.pastel-puzzles {
-  
+.puzzle {
+  background-image: url("../images/puzzle.jpg");
+  background-size: cover;
 }
 
-.surf-report {
-  
+.surf {
+  background-image: url("../images/Surfing.webp");
+  background-size: cover;
+  background-position: center;
 }
 
 /* media queries */
@@ -278,3 +290,43 @@ main {
 }
 
 /* TODO: add media query for a max-width of 768px */
+/*  */
+@media screen and (max-width: 768px) {
+  .flex-item {
+    min-height: 150px;
+  }
+  .flex-item:first-child {
+    min-height: 150px;
+  }
+
+  header {
+    padding: 0 0 10px 0;
+    justify-content: center;
+    text-align: center;
+  }
+
+  header h1 {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 10dvw
+  }
+
+  header nav {
+    justify-content: center;
+  }
+
+  .page-section > h2,
+  .page-section > div {
+    flex: 0 0 100%;
+  }
+
+  .page-section > h2 {
+    border-right: none;
+    border-bottom: 4px solid var(--primary);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    text-align: left;
+    font-size: 7vw;
+  }
+}
